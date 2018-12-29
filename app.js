@@ -2,7 +2,9 @@
 
 
 App({
-
+  globalData:{
+    userInfo:null
+  },
   onLaunch: function () {
     var isDebug = false;//true调试状态使用本地服务器，非调试状态使用远程服务器
     if (!isDebug) {
