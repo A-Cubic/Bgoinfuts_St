@@ -1,0 +1,32 @@
+<!--index.wxml-->
+<view class='center'>
+    <view class='warp'>
+      <rich-text class='des'>*扫描客户端出示的二维码，再进行打卡签到、 进店消费操作</rich-text>
+      <view class='wrap-scan' bindtap="toScanCode">
+        
+        <image src='{{scanImgurl}}' mode='widthFix'></image>
+      </view>
+      <view class='btns'>
+         <button disabled="{{scanCode==''}}" class='sign' bindtap='getSign'>签到打卡</button>
+         <button disabled="{{scanCode==''}}" class='consume' bindtap='getConsume'>进店消费</button>
+      </view>
+    </view>
+</view>
+
+
+<van-dialog
+  use-slot
+  async-close
+  show-cancel-button
+  show="{{ showConsume }}"
+  bind:close="onSureConsume"
+>
+<van-field
+  required
+  type="digit"
+  bind:change="onChangeInput"
+  value="{{ consume }}"
+  label="消费金额（元）"
+  placeholder="请输入消费金额"
+/>
+</van-dialog>

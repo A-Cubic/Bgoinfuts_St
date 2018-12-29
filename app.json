@@ -1,0 +1,19 @@
+{
+  "pages":[
+    
+    "pages/index/index",
+    "pages/start/index",
+    
+    "pages/test/test"
+    
+    
+
+    
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "商家版",
+    "navigationBarTextStyle":"black"
+  }
+}
