@@ -16,14 +16,7 @@ Page({
       num: e.detail.value
     })
   },
-  getUserInfo: function (e) {
-    // console.log(e)
-    app.globalData.userInfo = e.detail.userInfo
-    this.setData({
-      userInfo: e.detail.userInfo,
-      hasUserInfo: true
-    })
-  },
+
   bindGetUserInfo: function (e) {
     app.globalData.userInfo = e.detail.userInfo
     this.setData({
@@ -44,17 +37,17 @@ Page({
     // console.log('app.globalData.userInfo，携带数据为：', app.globalData.userInfo)
 
     // console.log('form发生了submit事件，携带数据为：', e.detail.value)
-    if (!!e.detail.value && !!app.globalData.userInfo.nickName){
-      this.getData()
-    }
+    // if (!!e.detail.value && !!app.globalData.userInfo.nickName){
+    //   this.getData()
+    // }
   },
   getData:function(){
     app.Ajax(
       // 方法组名称为：User（代购用户），不是系统通用用户Users
-      'Users',
+      'Open',
       'POST',
-      'StaffReg',
-      { staffCode: this.data.num, ...app.globalData.userInfo },
+      'ShopUserReg',
+      { storeCode: this.data.num, ...app.globalData.userInfo },
       function (json) {
         // console.log('json',json);
         if (json.success) {
