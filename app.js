@@ -6,7 +6,7 @@ App({
     userInfo:null
   },
   onLaunch: function () {
-    var isDebug = false;//true调试状态使用本地服务器，非调试状态使用远程服务器
+    var isDebug = true;//true调试状态使用本地服务器，非调试状态使用远程服务器
     if (!isDebug) {
       //远程域名
       wx.setStorageSync('domainName', "https://wxapp.a-cubic.com/api/gift/Wx/")
@@ -35,7 +35,7 @@ App({
 
               if (!!json.data.isReg) {
                 console.log('已经登录过');
-                wx.navigateTo({
+                wx.redirectTo({
                   url: '../index/index',
                 })
               }
