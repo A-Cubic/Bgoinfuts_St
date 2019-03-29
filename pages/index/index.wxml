@@ -1,13 +1,18 @@
 <!--index.wxml-->
 <view class='center'>
     <view class='warp'>
-      <rich-text class='des'>*扫描客户端出示的二维码，再进行打卡签到、 进店消费操作</rich-text>
+      <rich-text class='des'>*扫描客户端出示的二维码，</rich-text>
+      <rich-text class='des'>进行进店消费、客户取货、送分活动操作</rich-text>
+      <view class='input_wrap'>
+        <text class='input_wrap_te'>消费金额 ¥：</text>
+        <input type='digit' class='input_wrap_con' value='{{ainput_money}}' bindinput='bindinputMoney' maxlength='12'></input>
+      </view>
       <view class='wrap-scan' bindtap="toScanCode">
         
         <image src='{{scanImgurl}}' mode='widthFix'></image>
       </view>
       <view class='btns'>
-         <button disabled="{{scanCode==''}}" class='sign' bindtap='getSign'>签到打卡</button>
+         <!-- <button disabled="{{scanCode==''}}" class='sign' bindtap='getSign'>签到打卡</button> -->
          <button disabled="{{scanCode==''}}" class='consume' bindtap='getConsume'>进店消费</button>
       </view>
     </view>

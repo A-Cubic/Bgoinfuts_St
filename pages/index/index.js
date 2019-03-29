@@ -3,20 +3,20 @@
 const app = getApp()
 Page({
   data: {
-    scanImgurl:'http://llwell-wxapp.oss-cn-beijing.aliyuncs.com/A-cubic/scanCode2.png',
+    scanImgurl:'http://llwell-wxapp.oss-cn-beijing.aliyuncs.com/PurchasingAssistantShop/top_icon_scan_blue_normal@3x.png',
     showConsume: false,
     scanCode:'',
     consume:''
   },
   
   onLoad: function () {
-    console.log('sss', this.data)
+    // console.log('sss', this.data)
   },
   toScanCode:function(){
     wx.scanCode({
       success: (res) => {
         this.setData({
-          scanImgurl: 'http://llwell-wxapp.oss-cn-beijing.aliyuncs.com/A-cubic/scanCode1.png',
+          scanImgurl: 'http://llwell-wxapp.oss-cn-beijing.aliyuncs.com/PurchasingAssistantShop/top_icon_Refund_success@3x.png',
           scanCode: '12',
         })
 

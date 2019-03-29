@@ -1,4 +1,6 @@
 {
+  "navigationBarBackgroundColor": "#3e78c3",
+  "navigationBarTitleText": "扫码互动",
   "usingComponents": {
     
     "i-grid": "../../iview/grid/index",
