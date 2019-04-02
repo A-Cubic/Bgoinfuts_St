@@ -3,10 +3,10 @@
     <view class='warp'>
       <rich-text class='des'>*扫描客户端出示的二维码，</rich-text>
       <rich-text class='des'>进行进店消费、客户取货、送分活动操作</rich-text>
-      <view class='input_wrap'>
+      <!-- <view class='input_wrap'>
         <text class='input_wrap_te'>消费金额 ¥：</text>
         <input type='digit' class='input_wrap_con' value='{{ainput_money}}' bindinput='bindinputMoney' maxlength='12'></input>
-      </view>
+      </view> -->
       <view class='wrap-scan' bindtap="toScanCode">
         
         <image src='{{scanImgurl}}' mode='widthFix'></image>
@@ -19,7 +19,7 @@
 </view>
 
 
-<van-dialog
+<!-- <van-dialog
   use-slot
   async-close
   show-cancel-button
@@ -34,4 +34,11 @@
   label="消费金额（元）"
   placeholder="请输入消费金额"
 />
-</van-dialog>
+</van-dialog> -->
+
+<i-modal title="消费金额" visible="{{ showConsume }}" bind:ok="onSureConsume" bind:cancel="onSureConsume">
+  <view class='modal_input_wrap'>
+    <text class='modal_input_wrap_te'> ¥：</text>
+    <input class='modal_input_wrap_con' type='digit' value='{{ainput_money}}' bindinput='bindinputMoney' maxlength='12'></input>
+  </view>
+</i-modal>

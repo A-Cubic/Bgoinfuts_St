@@ -14,24 +14,24 @@
         <view class="weui-tab__panel">
             <!-- 待收货列表 -->
             <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
-
               <view class='content'>
-                  <view class='main' wx:for="{{getData.process.processList}}" wx:key='{{id}}'>
-                    <view class='h1 borBotGray'>❤{{item.shopName}}</view>
-                    <view class='h1 clearfix'>
-                      <view class='time f1'>{{item.recordTime}}</view>
-                      <!-- <view class='putForward r1'>{{payState[item.payState]}}</view> -->
+                  <view class='content_wrap' wx:for='{{getData.pendingReceiptList}}' data-index='{{index}}' wx:key='id'>
+                    <view class='content_wrapLeft'>
+                      <image src='{{item.goodsImg}}' mode='widthFix'></image>
                     </view>
-                    <view class='h2'>消费金额：₩ {{item.total}}</view>
-                    <view class='h2'>返点率：{{item.rate}}</view>
-                    <view class='h2'>预计返利：₩ {{item.money}}</view>
-                    <!-- <view class='h2'>提现地址：{{item.payAddr}}</view>
-                    <view class='h2'>申请时间：{{item.applyTime}}</view>
-                    <view class='h2'>提现时间：{{item.payTime}}</view> -->
+                    <view class='content_wrapCenter'>
+                      <view class='content_goodsName'>
+                        {{item.goodsName}}
+                      </view>
+                      <view class='clearfix'>
+                        <text class='content_num'>数量：{{item.goodsNum}}</text>
+                        <button class='content_sure' bindtap="">确认</button>
+                      </view>
+                    </view>
                   </view>
                  
                   <!-- 当内容List 不为空时隐藏 -->
-                  <view class='noRecord' hidden="{{getData.process.processList != ''}}">{{noRecord}}</view>
+                  <view class='noRecord' hidden="{{getData.pendingReceiptList != ''}}">{{noRecord}}</view>
                 </view>
             </view>
             <!-- 点库存列表 -->

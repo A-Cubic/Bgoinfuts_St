@@ -8,7 +8,7 @@
     "i-grid-icon": "../../iview/grid-icon/index",
     "i-grid-label": "../../iview/grid-label/index",
     "i-icon": "../../iview/icon/index",
-
+    "i-modal": "../../iview/modal/index",
 
 
     "van-dialog": "../../vant/dialog/index",

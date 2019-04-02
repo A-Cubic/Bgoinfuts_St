@@ -2,6 +2,7 @@
 page{
     background: #fff;
 }
+
 .giftListWrap{
 }
 .index .weui-bar__item_on {
@@ -64,4 +65,51 @@ page{
 background-size:180rpx 180rpx;
 padding:220rpx 0 0;
 
+}
+
+
+.content_wrap {
+  height: 150rpx;
+  padding: 3rpx 25rpx;
+  background: #fff;
+  margin: 0 auto 4rpx;
+  box-shadow:0 1px 3px 0 rgba(0,0,0,0.10);
+  display: flex;
+  /* justify-content:center;
+  align-items:center; */
+}
+
+.content_wrapLeft {
+  width: 150rpx;
+  height: 150rpx;
+}
+.content_wrapLeft image {
+  display: block;
+  width: 100%;
+}
+
+.content_wrapCenter {
+  width: 550rpx;
+}
+.content_wrapCenter text {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+.content_goodsName {
+  height: 100rpx;
+  font-size: 30rpx;
+  color: #689ce3;
+}
+.content_num {
+  float: left;
+  font-size: 24rpx;
+  color: #393939;
+}
+.content_sure{
+  float: right;
+  line-height:45rpx;
+  font-size: 28rpx;
+  padding: 0rpx 20rpx;
 }
