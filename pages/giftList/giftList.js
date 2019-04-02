@@ -13,8 +13,20 @@ Page({
           goodsName: '韩国Hans Miracle褐藻糖胶海洋护发素 500ml',
           goodsNum: '324'
         }
+      ], 
+      stockList: [
+        {
+          goodsImg: 'http://ecc-product.oss-cn-beijing.aliyuncs.com/goodsuploads/4987009156807.jpg',
+          goodsName: '韩国Hans Miracle褐藻糖胶海洋护发素 500ml',
+          goodsNum: '324',
+          time:'2018-5-154545'
+        }, {
+          goodsImg: 'http://ecc-product.oss-cn-beijing.aliyuncs.com/goodsuploads/4987009156807.jpg',
+          goodsName: '韩国Hans Miracle褐藻糖胶海洋护发素 500ml',
+          goodsNum: '324',
+          time: '2018-5-154545'
+        }
       ],
-
     },
     tabs: ["待收货列表", "店库存列表"],
     payState:['已配送','已到店'],

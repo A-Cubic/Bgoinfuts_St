@@ -38,28 +38,26 @@
             <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
                 
                 <view class='content'>
-                  <view class='main' wx:for="{{getData.pay.payList}}" wx:key='{{id}}'>
-                    <view class='h1 borBotGray'>❤{{item.shopName}}</view>
-                    <view class='h1 clearfix'>
-                      <view class='time f1'>{{item.recordTime}}</view>
-                      <view class='putForward r1'>{{payStateEx[item.payStateEx]}}</view>
+                  <view class='content_wrap' wx:for='{{getData.stockList}}' data-index='{{index}}' wx:key='id'>
+                    <view class='content_wrapLeft'>
+                      <image src='{{item.goodsImg}}' mode='widthFix'></image>
                     </view>
-                    <view class='h2'>消费金额：₩ {{item.total}}</view>
-                    <view class='h2'>返点率：{{item.rate}}</view>
-                    <view class='h2'>预计返利：{{item.payType==1?'¥':'₩'}} {{item.money}}</view>
-                    <view class='h2' hidden='{{item.payType==1||item.payState==0}}'>提现地址：{{item.payAddr}}</view>
-                    <view class='h2' hidden='{{item.payState==0}}'>申请时间：{{item.applyTime}}</view>
-                    <view class='h2' hidden='{{item.payType==1||item.payState==0}}'>最早提现时间：{{item.payTime}}</view>
-                    <view class='h2' hidden='{{item.payType==0||item.payState==0}}'>预计转账时间：{{item.payTime}}</view>
-                  </view>
-                  <view class='total' hidden="{{getData.pay.payList == ''}}">
-                    <view>共{{getData.pay.pay}}条记录</view>
-                    <view>消费金额总计：₩ {{getData.pay.payTotal}}</view>
-                    <view>银行卡返利：¥ {{getData.pay.payRmbMoney}}</view>
-                    <view>可提现返利：₩ {{getData.pay.payMoney}}</view>
+                    <view class='content_wrapCenter'>
+                      <view class='content_goodsName'>
+                        {{item.goodsName}}
+                      </view>
+                      <view class='clearfix'>
+                        <text class='content_num'>数量：{{item.goodsNum}}</text>
+                        <!-- <button class='content_sure' bindtap="">确认</button> -->
+                      </view>
+                       <view class='clearfix'>
+                        <text class='content_num'>最后收获时间：{{item.time}}</text>
+                        <!-- <button class='content_sure' bindtap="">确认</button> -->
+                      </view>
+                    </view>
                   </view>
                   <!-- 当内容List 不为空时隐藏 -->
-                  <view class='noRecord' hidden="{{getData.pay.payList != ''}}">{{noRecord}}</view>
+                  <view class='noRecord' hidden="{{getData.stockList != ''}}">{{noRecord}}</view>
                 </view>
             </view>
             
