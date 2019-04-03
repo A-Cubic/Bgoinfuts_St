@@ -4,15 +4,15 @@ Page({
   data: {
     getData: {
       pendingReceiptList:[
-        // {
-        //   goodsImg:'http://ecc-product.oss-cn-beijing.aliyuncs.com/goodsuploads/4987009156807.jpg',
-        //   goodsName:'韩国Hans Miracle褐藻糖胶海洋护发素 500ml',
-        //   goodsNum:'324'
-        // }, {
-        //   goodsImg: 'http://ecc-product.oss-cn-beijing.aliyuncs.com/goodsuploads/4987009156807.jpg',
-        //   goodsName: '韩国Hans Miracle褐藻糖胶海洋护发素 500ml',
-        //   goodsNum: '324'
-        // }
+        {
+          goodsImg:'http://ecc-product.oss-cn-beijing.aliyuncs.com/goodsuploads/4987009156807.jpg',
+          goodsName:'韩国Hans Miracle褐藻糖胶海洋护发素 500ml',
+          goodsNum:'324'
+        }, {
+          goodsImg: 'http://ecc-product.oss-cn-beijing.aliyuncs.com/goodsuploads/4987009156807.jpg',
+          goodsName: '韩国Hans Miracle褐藻糖胶海洋护发素 500ml',
+          goodsNum: '324'
+        }
       ], 
       stockList: [
         {
