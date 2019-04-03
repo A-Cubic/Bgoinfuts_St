@@ -51,7 +51,7 @@
                         <!-- <button class='content_sure' bindtap="">确认</button> -->
                       </view>
                        <view class='clearfix'>
-                        <text class='content_num'>最后收获时间：{{item.time}}</text>
+                        <text class='content_num'>最后到货时间：{{item.time}}</text>
                         <!-- <button class='content_sure' bindtap="">确认</button> -->
                       </view>
                     </view>

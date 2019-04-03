@@ -29,3 +29,9 @@
 .borBotGray{
   border-bottom:1px dashed #EDEDED; 
 }
+page .color{
+  color: #689ce3
+}
+page .red{
+  color: #ff0000;
+}

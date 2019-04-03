@@ -1,5 +1,6 @@
 {
   "pages":[
+    "pages/settlementList/settlementList",
     "pages/giftList/giftList",
     "pages/index/index",
     "pages/register/register",
@@ -8,7 +9,7 @@
   ],
   "window":{
     "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
+    "navigationBarBackgroundColor": "#3e78c3",
     "navigationBarTitleText": "",
     "navigationBarTextStyle":"white"
   },
@@ -32,7 +33,7 @@
       {
         "selectedIconPath": "static/img/fn_3.png",
         "iconPath": "static/img/ac_3.png",
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/settlementList/settlementList",
         "text": "结算"
       }
     ]

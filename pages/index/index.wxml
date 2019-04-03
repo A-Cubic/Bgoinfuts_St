@@ -8,12 +8,11 @@
         <input type='digit' class='input_wrap_con' value='{{ainput_money}}' bindinput='bindinputMoney' maxlength='12'></input>
       </view> -->
       <view class='wrap-scan' bindtap="toScanCode">
-        
         <image src='{{scanImgurl}}' mode='widthFix'></image>
       </view>
       <view class='btns'>
          <!-- <button disabled="{{scanCode==''}}" class='sign' bindtap='getSign'>签到打卡</button> -->
-         <button disabled="{{scanCode==''}}" class='consume' bindtap='getConsume'>进店消费</button>
+         <button disabled="{{scanCode==''}}" class='consume' bindtap='getConsume'>确定</button>
       </view>
     </view>
 </view>
