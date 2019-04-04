@@ -15,9 +15,11 @@ Page({
   toScanCode:function(){
     wx.scanCode({
       success: (res) => {
+        
+        // res.result.splice('_')
         this.setData({
           scanImgurl: 'http://llwell-wxapp.oss-cn-beijing.aliyuncs.com/PurchasingAssistantShop/top_icon_Refund_success@3x.png',
-          scanCode: '12',
+          scanCode: res.result,
         })
 
 
@@ -52,10 +54,24 @@ Page({
   getSign:function(){
       console.log('签到接口')
   },
-  getConsume: function () {
-    this.setData({
-      showConsume:true
-    })
+  makeSure: function () {
+    // this.setData({
+    //   showConsume:true
+    // })
+    let code = this.data.scanCode;
+    let type = code.split('_')[0]
+    console.log(type)
+    switch (type) {
+      case 'ORDER':
+        console.log(1)
+        break;
+      case 'a':
+        console.log(2)
+        break;
+      default:
+        console.log(3)
+        break;
+    }
   },
   onSureConsume(event) {
     if (event.detail === 'confirm') {

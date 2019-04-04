@@ -1,12 +1,12 @@
 <!--pages/settlementList/settlementList.wxml-->
 <view class='settlementList'>
   <view class='content'>
-    <view class='unit' wx:for='{{getData.list}}' data-index='{{index}}' wx:key='id'>
-      <view class='unit-row color'>结算周期：{{item.cycle}}</view>
-      <view class='unit-row'>用户充值兑换额（¥）：{{item.exchange}}</view>
-      <view class="unit-row {{item.status=='待付款'?'red':''}}" >结算状态：{{item.status}}</view>
+    <view class='unit' wx:for='{{getData}}' data-index='{{index}}' wx:key='id'>
+      <view class='unit-row color'>结算周期：{{item.paymentDays}}</view>
+      <view class='unit-row'>用户充值兑换额：¥{{item.heartNum}}</view>
+      <view class="unit-row {{item.state=='待付款'?'red':''}}" >结算状态：{{item.state}}</view>
     </view>
     <!-- 当内容List 不为空时隐藏 -->
-    <view class='noRecord' hidden="{{getData.list != ''}}">{{noRecord}}</view>
+    <view class='noRecord' hidden="{{getData != ''}}">{{noRecord}}</view>
   </view>
 </view>

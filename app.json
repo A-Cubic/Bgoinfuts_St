@@ -1,10 +1,12 @@
 {
   "pages":[
-    "pages/settlementList/settlementList",
-    "pages/giftList/giftList",
-    "pages/index/index",
-    "pages/register/register",
     "pages/start/start",
+    "pages/index/index",
+    "pages/giftList/giftList",
+    "pages/settlementList/settlementList",
+    
+    "pages/register/register",
+    
     "pages/test/test"
   ],
   "window":{

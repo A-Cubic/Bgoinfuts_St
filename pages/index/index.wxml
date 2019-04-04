@@ -12,7 +12,7 @@
       </view>
       <view class='btns'>
          <!-- <button disabled="{{scanCode==''}}" class='sign' bindtap='getSign'>签到打卡</button> -->
-         <button disabled="{{scanCode==''}}" class='consume' bindtap='getConsume'>确定</button>
+         <button disabled="{{scanCode==''}}" class='consume' bindtap='makeSure'>确定</button>
       </view>
     </view>
 </view>

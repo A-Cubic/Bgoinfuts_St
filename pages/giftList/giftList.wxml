@@ -15,7 +15,7 @@
             <!-- 待收货列表 -->
             <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
               <view class='content'>
-                  <view class='content_wrap' wx:for='{{getData.pendingReceiptList}}' data-index='{{index}}' wx:key='id'>
+                  <view class='content_wrap' wx:for='{{getData.listAsn}}' data-index='{{index}}' wx:key='id'>
                     <view class='content_wrapLeft'>
                       <image src='{{item.goodsImg}}' mode='widthFix'></image>
                     </view>
@@ -24,21 +24,21 @@
                         {{item.goodsName}}
                       </view>
                       <view class='clearfix'>
-                        <text class='content_num'>数量：{{item.goodsNum}}</text>
-                        <button class='content_sure' bindtap="">确认</button>
+                        <text class='content_num'>数量：{{item.num}}</text>
+                        <button class='content_sure' data-goodsId='{{item.goodsId}}' bindtap="makeSure">确认</button>
                       </view>
                     </view>
                   </view>
                  
                   <!-- 当内容List 不为空时隐藏 -->
-                  <view class='noRecord' hidden="{{getData.pendingReceiptList != ''}}">{{noRecord}}</view>
+                  <view class='noRecord' hidden="{{getData.listAsn != ''}}">{{noRecord}}</view>
                 </view>
             </view>
             <!-- 点库存列表 -->
             <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
                 
                 <view class='content'>
-                  <view class='content_wrap' wx:for='{{getData.stockList}}' data-index='{{index}}' wx:key='id'>
+                  <view class='content_wrap' wx:for='{{getData.listStock}}' data-index='{{index}}' wx:key='id'>
                     <view class='content_wrapLeft'>
                       <image src='{{item.goodsImg}}' mode='widthFix'></image>
                     </view>
@@ -47,17 +47,17 @@
                         {{item.goodsName}}
                       </view>
                       <view class='clearfix'>
-                        <text class='content_num'>数量：{{item.goodsNum}}</text>
+                        <text class='content_num'>数量：{{item.num}}</text>
                         <!-- <button class='content_sure' bindtap="">确认</button> -->
                       </view>
                        <view class='clearfix'>
-                        <text class='content_num'>最后到货时间：{{item.time}}</text>
+                        <text class='content_num'>最后到货时间：{{item.lastUpdateTime}}</text>
                         <!-- <button class='content_sure' bindtap="">确认</button> -->
                       </view>
                     </view>
                   </view>
                   <!-- 当内容List 不为空时隐藏 -->
-                  <view class='noRecord' hidden="{{getData.stockList != ''}}">{{noRecord}}</view>
+                  <view class='noRecord' hidden="{{getData.listStock != ''}}">{{noRecord}}</view>
                 </view>
             </view>
             

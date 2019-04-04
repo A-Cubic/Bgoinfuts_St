@@ -1,4 +1,5 @@
 // pages/settlementList/settlementList.js
+const app = getApp()
 Page({
 
   /**
@@ -6,19 +7,19 @@ Page({
    */
   data: {
     noRecord:'暂时没有相关记录',
-    getData:{
-      list: [
-        {
-          cycle: '2019-01-01 ~ 2019-06-01',
-          exchange: '200000',
-          status: '待付款'
-        }, {
-          cycle: '2019-01-01 ~ 2019-06-01',
-          exchange: '200000',
-          status: '已付款'
-        }
-      ], 
-    }
+    getData:[],
+    getDataOld: [
+      {
+        paymentDays: '2019-01-01 ~ 2019-06-01',
+        heartNum: '200000',
+        state: '待付款'
+      }, {
+        paymentDays: '2019-01-01 ~ 2019-06-01',
+        heartNum: '200000',
+        state: '已付款'
+      }
+    ], 
+    
     
   },
 
@@ -26,49 +27,31 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.getMainList()
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
+  getMainList: function () {
+    const that = this;
+    app.Ajax(
+      'Store',
+      'POST',
+      'GetStoreAccount',
+      {},
+      function (json) {
+        console.log('aaa', json);
+        if (json.success) {
+          that.setData({
+            getData: json.data
+          })
+        } else {
+          app.Toast('', 'none', 3000, json.msg.code);
+          // wx.showToast({
+          //   title: json.msg.msg,
+          //   icon: 'none',
+          //   duration: 2500
+          // });
+        }
+      }
+    )
   },
 
 })
