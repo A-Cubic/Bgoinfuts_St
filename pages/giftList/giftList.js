@@ -72,7 +72,6 @@ Page({
       'GetAsnAndStock',
       {  },
       function (json) {
-        console.log('aaa',json);
         if (json.success) {
           that.setData({
             getData: json.data
@@ -89,19 +88,20 @@ Page({
     )
   },
   makeSure:function(e){
-    console.log(e)
+    // console.log(e.currentTarget.dataset.goodsid)
     const that = this;
     app.Ajax(
       'Store',
       'POST',
-      'GetAsnAndStock',
-      {},
+      'CheckAsnGoods',
+      {
+        goodsId: e.currentTarget.dataset.goodsid
+      },
       function (json) {
-        console.log('aaa', json);
+        console.log('here',json)
         if (json.success) {
-          that.setData({
-            getData: json.data
-          })
+          app.Toast('成功收货', 'success', 2000);
+          that.getMainList()
         } else {
           app.Toast('', 'none', 3000, json.msg.code);
           // wx.showToast({

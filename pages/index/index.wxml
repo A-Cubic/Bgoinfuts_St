@@ -35,9 +35,29 @@
 />
 </van-dialog> -->
 
-<i-modal title="消费金额" visible="{{ showConsume }}" bind:ok="onSureConsume" bind:cancel="onSureConsume">
+<i-modal title="赠送积分" visible="{{ showExchange }}" bind:ok="onSureExchange" bind:cancel="closeReset">
+  <view class='modal_input_wrap'>
+    <text class='modal_input_wrap_te'> 积分：</text>
+    <input class='modal_input_wrap_con' type='digit' value='{{score}}' bindinput='bindInputExchange' maxlength='12'></input>
+  </view>
+</i-modal>
+
+
+<i-modal title="消费" visible="{{ showCheck }}" bind:ok="onSureConsume" bind:cancel="closeReset">
   <view class='modal_input_wrap'>
     <text class='modal_input_wrap_te'> ¥：</text>
-    <input class='modal_input_wrap_con' type='digit' value='{{ainput_money}}' bindinput='bindinputMoney' maxlength='12'></input>
+    <input class='modal_input_wrap_con' type='digit' value='{{consume}}' bindinput='bindInputConsume' maxlength='12'></input>
+  </view>
+</i-modal>
+
+<i-modal title="即将取货列表" visible="{{ showOrder }}" bind:ok="onSureOrder" bind:cancel="closeReset">
+  <view class='list_wrap'>
+    <view class='list_wrap_unit' wx:for='{{listData}}'>
+      <!-- <view class='unit_img'>aa
+        <image src='{{item.goodsImg}}' mode='widthFix'></image>
+      </view> -->
+      <view class='unit_name'>{{item.goodsName}}</view>
+      <view class='unit_num'>{{item.goodsNum}}</view>
+    </view>
   </view>
 </i-modal>

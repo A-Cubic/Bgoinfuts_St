@@ -12,7 +12,7 @@
 		"autoAudits": false
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.2.4",
+	"libVersion": "2.6.5",
 	"appid": "wx0d8e4aaa61fad096",
 	"projectname": "Bgoinfuts_St",
 	"debugOptions": {

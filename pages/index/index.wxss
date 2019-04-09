@@ -105,11 +105,12 @@ button[disabled]:not([type]) {
 }
 .modal_input_wrap_te {
   width: 100rpx;
-  font-size: 30rpx;
+  font-size: 28rpx;
   text-align: right;
 }
 
 .modal_input_wrap_con {
+  
   border: 1rpx solid #DFDFDF;
   height: 90rpx;
   line-height: 90rpx;
@@ -120,4 +121,21 @@ button[disabled]:not([type]) {
   white-space: nowrap;
   /* margin-left: 150rpx; */
   text-align: left;
+}
+.list_wrap{
+  max-height: 400rpx;
+}
+.list_wrap_unit{
+  display: flex
+}
+.unit_name{
+  width: 400rpx;
+  overflow: hidden;
+text-overflow:ellipsis;
+white-space: nowrap;
+}
+.unit_num{
+  width: 120rpx;
+  text-align: right;
+  color: #3e78c3;
 }
