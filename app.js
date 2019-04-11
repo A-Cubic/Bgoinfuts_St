@@ -26,7 +26,7 @@ App({
           'ShopUserLogin',
           { code: res.code },
           function (json) {
-            console.log('~~~',json);
+            // console.log('~~~',json);
             if (json.success) {
               wx.setStorageSync('token', json.data.token);
               // wx.setStorageSync('scanCode', json.data.scanCode);
@@ -96,42 +96,42 @@ App({
   Toast: function (title, icon, duration, code) {
     let content = title;
     switch (code) {
-      // 个人中心
-      case 10001:
-        content = '会员已存在'
+      // 店铺
+      case 10301:
+        content = '店铺用户已存在'
         break;
-      case 10002:
-        content = '会员注册异常'
+      case 10302:
+        content = '店铺用户注册失败'
         break;
-      case 10003:
-        content = '用户已绑定'
+      case 10303:
+        content = '无效的验证码'
         break;
-      case 10004:
-        content = '无效会员卡'
+      case 10304:
+        content = '无效的取货码'
         break;
-      case 10005:
-        content = '绑定会员卡错误'
+      case 10305:
+        content = '确认取货失败'
         break;
-      case 10006:
-        content = '无效验证码'
+      case 10306:
+        content = '该店铺没有待取货订单'
         break;
-      case 10007:
-        content = '处理积分同步错误'
+      case 10307:
+        content = '无效的转换码'
         break;
-      case 10008:
-        content = '兑换积分错误'
+      case 10308:
+        content = '	需要先注册该店铺会员'
         break;
-      case 10009:
-        content = '设置默认会员店铺失败'
+      case 10309:
+        content = '转换失败'
         break;
-      case 10010:
-        content = '获取验证码错误'
+      case 10310:
+        content = '确认收货失败'
         break;
-      case 10011:
-        content = '您今天的兑换已经达到上限了哦'
+      case 10311:
+        content = '无效的签到码'
         break;
-      case 10012:
-        content = '您的手机号在该店铺已经绑定过了哦'
+      case 10312:
+        content = '消费签到失败'
         break;
 
       // 商城

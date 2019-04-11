@@ -52,7 +52,7 @@
 
 <i-modal title="即将取货列表" visible="{{ showOrder }}" bind:ok="onSureOrder" bind:cancel="closeReset">
   <view class='list_wrap'>
-    <view class='list_wrap_unit' wx:for='{{listData}}'>
+    <view class='list_wrap_unit' wx:for='{{listData}}' wx:key="{{item.goodsId}}">
       <!-- <view class='unit_img'>aa
         <image src='{{item.goodsImg}}' mode='widthFix'></image>
       </view> -->

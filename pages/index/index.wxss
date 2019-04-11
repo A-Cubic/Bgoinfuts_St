@@ -126,7 +126,8 @@ button[disabled]:not([type]) {
   max-height: 400rpx;
 }
 .list_wrap_unit{
-  display: flex
+  display: flex;
+  padding:auto 10rpx;
 }
 .unit_name{
   width: 400rpx;

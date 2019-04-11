@@ -134,8 +134,8 @@ Page({
           app.Toast('操作成功', 'success', 2000);
           that.setData({
             showOrder:true,
-            orderId: json.orderId,
-            listData: json.list
+            orderId: json.data.orderId,
+            listData: json.data.list
           })
         } else {
           that.closeReset();
@@ -158,8 +158,8 @@ Page({
       { ...params },
       function (json) {
         if (json.success) {
+          that.closeReset();
           app.Toast('取货成功', 'success', 2000);
-          setTimeout(that.closeReset(), 2000)
 
         } else {
           that.closeReset();
