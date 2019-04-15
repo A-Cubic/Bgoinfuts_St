@@ -51,7 +51,7 @@ Page({
       function (json) {
         // console.log('json',json);
         if (json.success) {
-          wx.redirectTo({
+          wx.switchTab({
             url: '../index/index',
           })
         } else {
