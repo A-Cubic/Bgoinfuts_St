@@ -177,6 +177,9 @@ App({
       case 10202:
         content = '	同步用户信息失败'
         break;
+      case 10313:
+        content = '	今日已签到'
+        break;
 
       // 通用
       case 201:
