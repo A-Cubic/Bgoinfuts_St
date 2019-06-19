@@ -1,19 +1,17 @@
 {
-  "pages":[
+  "pages": [
     "pages/start/start",
     "pages/index/index",
     "pages/giftList/giftList",
     "pages/settlementList/settlementList",
-    
     "pages/register/register",
-    
     "pages/test/test"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#3e78c3",
     "navigationBarTitleText": "",
-    "navigationBarTextStyle":"white"
+    "navigationBarTextStyle": "white"
   },
   "tabBar": {
     "color": "#a9b7b7",

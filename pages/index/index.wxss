@@ -22,7 +22,7 @@ page{
 }
 .des{
   color: #777;
-  font-size: 20rpx;
+  font-size: 25rpx;
   text-align: center;
 }
 .input_wrap {
@@ -57,7 +57,7 @@ page{
   border-radius: 30rpx;
   width: 300rpx;
   height: 300rpx;
-  margin: 100rpx auto;
+  margin: 150rpx auto;
 }
 .wrap-scan image{
   width: 100%;
@@ -104,7 +104,7 @@ button[disabled]:not([type]) {
   margin: auto;
 }
 .modal_input_wrap_te {
-  width: 100rpx;
+  width: 150rpx;
   font-size: 28rpx;
   text-align: right;
 }
